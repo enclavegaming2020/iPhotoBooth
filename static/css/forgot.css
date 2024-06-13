@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../icons/bg-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px 20px;
+}
+
+.form-main{
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.col-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 0 30% 20% 0;
+    transition: border-radius .4s ease .3s;
+}
+
+.image-container{
+    position: relative;
+    top: -5%;
+    width: 300px;
+    
+}
+
+.image-1{
+    width: 300px;
+    left:0;
+    transition: .3s;
+}
+
+.image-1:hover{
+    transform: scale(1.25);
+}
+
+.desc{
+    position: absolute;
+    font-size: 1.4em;
+    text-align: center;
+    top: 75%;
+    width: 345px;
+    transition: .3s;
+}
+
+.desc p{
+    color: whitesmoke;
+    text-align: center;
+}
+
+.desc span{
+    padding-left: 5px;
+    color:black
+}
+
+.desc strong{
+    color: rgb(246,91,64);
+}
+
+.col-2{
+    position: relative;
+    width: 45%;
+    padding: 20px;
+}
+
+.forgot-main{
+    display: block;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+}
+
+.forgot-text{
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    padding: 5px 0px;
+    background-color: rgba(283, 146, 212, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    
+}
+
+.forgot-text strong{
+    font-size: 2em;
+    color : white;
+}
+
+.input-field{
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.input-field input{
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(147,152,234,0.3);
+    box-shadow: 0 0 5px black;
+}
+
+.input-field input::placeholder{
+    color: white;
+}
+
+.input-field input[type="text"]{
+    color: white;
+    font-size: 1.2em;
+}
+
+.input-field input[type="password"]{
+    color: white;
+    font-size: 1.2em;
+}
+
+.input-field input[type="email"]{
+    color: white;
+    font-size: 1.2em;
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 20px;    
+}
+
+.input-box .icon{
+    position: absolute;
+    font-size: 1.75em;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.submit-btn{
+    position: relative;
+    width : 100%
+}
+
+.submit-btn button{
+    position: absolute;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    border : none;
+    background-color:rgba(218,143,107) ;
+    opacity: 0.7;
+    color: white;
+    transition: .3s;
+    box-shadow: 0 0 10px black;
+}
+
+.submit-btn button:hover{
+    transform: translateY(-10%);
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/icons/logo.png"/>
+    <link rel="stylesheet" href="../static/css/forgot.css">
+    <title>Forgot-Password</title>
+</head>
+<body>
+    <div class="form-main">
+        <div class="col-1">
+            <div class="image-container">
+                <img src="../static/icons/logo.png" class="image-1">
+            </div>
+            <div class="desc">
+                <p>It's my world my territory<span>Photo</span><strong>Booth</strong></p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="forgot-main">
+                <div class="forgot-text">
+                    <strong>Change Password</strong>
+                </div>
+                <div class="input-field">
+                    <form action = "{{url_for('forgot')}}" method="POST" enctype="multipart/form-data">
+                        <div class="input-box">
+                            <input type="password" placeholder="password" class="Password" name="password">
+                            <i class='bx bx-user icon'></i>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="msg">{{msg}}</div>
+        <script>
+            msg = document.querySelector(".msg")
+            if(msg.innerHTML !== ""){
+                alert([msg.innerHTML])
+            }
+        </script>
+</body>
+</html>

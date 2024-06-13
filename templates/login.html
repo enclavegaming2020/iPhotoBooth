@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/icons/logo.png"/>
+    <link rel="stylesheet" href="../static/css/login-css.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>PhotoBooth | Login and Resigtration</title>
+</head>
+<body>
+    <div class="form-main">
+        <div class="col-1">
+            <div class="image-container">
+                <img src="../static/icons/logo.png" class="image-1">
+            </div>
+            <div class="desc">
+                <p>It's my world my territory<span>Photo</span><strong>Booth</strong></p>
+            </div>
+            <div class="login-btn">
+                <button type="Submit" id="Sign-up">Sign Up</button>
+            </div>
+
+        </div>
+        <div class="col-2">
+            <div class="login-main">
+                <div class="login-text">
+                    <strong>Login</strong>
+                </div>
+                <div class="input-field">
+                    <form action = "{{url_for('login')}}" method="POST" enctype="multipart/form-data">
+                        <div class="input-box">
+                            <input type="text" placeholder="Username" class="username" name="username">
+                            <i class='bx bx-user icon'></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" class="Password" name="password">
+                            <i class="bx bx-key icon"></i>
+                        </div>
+                        <div class="forgot-pass">
+                            <a href = "{{url_for('forgot_password')}}">Forgot-Password?</a>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit">Log In</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <div class="signup-main">
+                <div class="sign-up-text">
+                    <strong>Sign-up</strong>
+                </div>
+                <div class="input-field">
+                    <form action = "{{url_for('register')}}" method="POST" enctype="multipart/form-data">
+                        <div class="input-box">
+                            <input type="text" placeholder="First Name" class="firstname" name="firstname">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Last Name" class="lastname" name="lastname">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Username" class="sign-username" name="signup-username">
+                        </div>
+                        <div class="input-box">
+                            <input type="email" placeholder="Email" class="email" name="email">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Password" class="Password Pass" name="signup-password">
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="show-pass" title="Show Password" onclick="togglePassword()">
+                            <span>Show</span>
+                        </div>
+                        <div class="sign-submit-btn">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="msg-box">
+        <i class='bx bx-ghost icons'></i>
+        <p class="msg">{{msg}}</p>
+    </div>
+    
+    <script src="../static/js/login.js"></script>
+</body>
+</html>
